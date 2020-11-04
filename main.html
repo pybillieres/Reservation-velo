@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Réservation de vélo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="leaflet/leaflet.css">
+  <link href="css/fontawesome.css" rel="stylesheet">
+  <link href="css/solid.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--slider-->
+  <header>
+    <div id="bloc_slide">
+      <div>
+      <div id="cadre_img_prec">
+      <img src="" id="img_prec">
+      </div>
+      <figure id="image">
+        <img src="" id="img_source">
+        <figcaption id="texte">
+        </figcaption>
+      </figure>
+      <div id="cadre_img_suiv">
+      <img src="" id="img_suiv">
+      </div>
+    </div>
+    </div>
+    <div id="boutons">
+      <button class=btn id="previous"><i class="fas fa-chevron-left"></i></button>
+      <button class=btn id="pause"><i class="fas fa-pause-circle" id="bouton_Pause"></i></button>
+      <button class=btn id="next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </header>
+
+  <!--Bloc carte et formulaire-->
+  <div id="bloc_resa">
+    <div id="carte"></div>
+    <div id="cadre_resa">
+      <p id="detail_station">Détail de la station</p>
+      <div id="resa">
+        <div id="info_station">
+          <p>Adresse : <span id="adresse_station"></span></p>
+          <p id="place_station"></p>
+          <p id="velo_dispo"></p>
+        </div>
+        <div id="cadre_formulaire">
+          <form name="formulaire_resa" id="formulaire_resa">
+            <div><label for="form_nom">Nom</label><input type="text" id="form_nom" value="" required></div>
+            <div><label for="form_prenom">Prénom</label><input type="text" id="form_prenom" value="" required></div>
+          </form>
+          <div id="bt_reserver">
+            <input type="button" value="Réserver" id="reserver">
+          </div>
+        </div>
+        <div id="canvas">
+          <canvas id="signature" width="400px" height="200px"></canvas>
+          <div id=cadre_validCanvas>
+            <input type="button" value="Valider ma réservation" id="validCanvas">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Timer et information de réservation en cours-->
+  <div id="cadre_info_resa">
+    <div>
+      <p id="info_resa"></p>
+      <p id="tps_resa"></p>
+    </div>
+  </div>
+
+  <!--Footer-->
+  <footer>
+
+  </footer>
+
+  <!--Appel des scripts-->
+  <script src="slide.js"></script>
+  <script src="slider.js"></script>
+  <script src="map.js"></script>
+  <script src="leaflet/leaflet.js"></script>
+  <script src="ajax.js"></script>
+  <script src="formulaire.js"></script>
+  <script src="canvas.js"></script>
+  <script src="reservation.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

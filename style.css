@@ -1,0 +1,370 @@
+body
+{
+    top: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*SLIDER*/
+
+header
+{
+    margin-top: 2%;
+}
+
+#bloc_slide
+{
+    position : relative;
+}
+
+#bloc_slide > div
+{
+    display: flex;
+    align-items: center;
+}
+
+#cadre_img_prec
+{
+    position: absolute;
+    width: 30%;
+    left: 20%;
+    top: 10%;
+    opacity: 50%;
+    border: solid 1px black;
+    transform: skewY(10deg);
+}
+
+#img_prec
+{
+    width: 100%;
+}
+
+#cadre_img_suiv
+{
+    position: absolute;
+    width: 30%;
+    right: 20%;
+    top: 10%;
+    opacity: 50%;
+    border: solid 1px black;
+    transform: skewY(-10deg);
+
+}
+
+#img_suiv
+{
+    width: 100%;
+}
+
+#image
+{
+    position: relative;
+    width: 40%;
+    margin: 0 auto 0 auto;
+    z-index: 10;
+    border: solid 2px black;
+}
+
+#img_source
+{
+    width: 100%;
+    height: auto;
+}
+
+#texte
+{
+    position: absolute;
+    background-color: grey;
+    border-radius: 10px;
+    width: 50%;
+    height: max-content;
+    bottom : 5%;
+    right: 5%;
+    font-size: 1.5em;
+    padding: 2%;
+}
+
+#boutons
+{
+    width: max-content;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 1% auto 3% auto;
+}
+
+.btn
+{
+    border : none;
+    background-color: white;
+}
+
+.fas
+{
+    font-size: 2.5em;
+}
+
+
+/*CARTE ET FORMULAIRE*/
+#bloc_resa
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: max-content;
+    margin: auto;
+}
+
+#carte
+{
+    width: 50vw;
+    height: 30vw;
+    border: solid 2px;
+}
+
+#cadre_resa
+{
+    width: 30vw;
+    height: 30vw;
+    margin-left: 3vw;
+    position: relative;
+    font-size: 1.5em;
+}
+
+#detail_station
+{
+    position: absolute;
+    margin: 0;
+    padding: 10px;
+    left: 40px;
+    top : calc(-0.5em - 10px);
+    background-color: white;
+    font-weight: bold;
+    z-index: 10;
+}
+
+#resa
+{
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    border: solid 2px grey;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    box-shadow: 4px 5px 0.3em grey;
+}
+
+#info_station
+{
+    height: 30%;
+}
+
+#cadre_formulaire
+{
+    height: calc(70% - 40px);
+}
+
+#formulaire_resa
+{
+    margin : auto;
+    height: calc(100% - 80px);
+    width: 100%;
+    margin: 16px auto 16px auto;
+}
+
+
+#formulaire_resa div
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin : 8% auto 8% auto;
+}
+
+#form_nom, #form_prenom
+{
+    width: 70%;
+    border: 1px black solid;
+    font-size: inherit;
+}
+
+label
+{
+    width: max-content;
+    max-width: 25%;
+}
+
+#bt_reserver
+{
+    width: 50%;
+    height: 80px;
+    margin: 0 auto 0 auto;
+}
+
+#reserver
+{
+    width: 100%;
+    border: solid black 1px;
+    border-radius: calc(1em + 10px);
+    padding: 10px;
+    box-shadow: 4px 5px 0.3em grey;
+    background-color: white;
+    font-size: inherit;
+
+}
+
+#canvas
+{
+    border: double black;
+    bottom : 20px;
+    width: max-content;
+    height: max-content;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+    display: none;
+    left: calc(50% - 200px);
+}
+
+#cadre_info_resa
+{
+    margin: 30px auto 0 auto;
+    font-size: 1.5em;
+    width: 80vw;
+
+}
+
+#info_resa, #tps_resa
+{
+    text-align: center;
+}
+
+/*FOOTER*/
+footer
+{
+    background-color: rgb(56, 56, 56);
+    height: 50px;;
+}
+
+
+@media all and (max-device-width:1400px){
+    #carte
+    {
+        height: 50vw;
+        width: 54vw;
+    }
+    #cadre_resa
+    {
+        width: 39vw;
+        height: 50vw;
+    }
+    
+    
+    #info_station
+    {
+        height: max-content;
+    }
+    
+    #cadre_formulaire
+    {
+        height: max-content;
+    }
+
+}   
+
+@media all and (max-device-width:1400px), (max-width:1400px){
+    #carte
+    {
+        height: 50vw;
+        width: 54vw;
+    }
+    #cadre_resa
+    {
+        width: 39vw;
+        height: 50vw;
+    }
+    
+    
+    #info_station
+    {
+        height: max-content;
+    }
+    
+    #cadre_formulaire
+    {
+        height: max-content;
+    }
+
+}
+
+
+
+@media all and (max-device-width:850px), (max-width:850px){
+
+body
+{
+    font-size: 2em;
+}
+
+header
+{
+    width: 100%;
+    height: max-content;
+    margin-top: 0;
+}
+#cadre_img_prec
+{
+    display: none;
+}
+
+#cadre_img_suiv
+{
+    display: none;
+}
+#image
+{
+    width: 100%;
+}
+#bloc_resa
+{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#carte
+{
+    width: 90%;
+    height: 60vh;
+}
+
+
+#cadre_resa
+{
+    width: 90%;
+    height: max-content;
+    margin-top: 50px;
+    margin-left: 0;
+}
+
+
+
+#info_station
+{
+    height: max-content;
+}
+
+#cadre_formulaire
+{
+    height: max-content;
+}
+
+
+
+}
+
+
+
+
+
